@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--常用颜色-->
+    <color name="colorPrimary">#303f9f</color>
+    <color name="red">#f7060a</color>
+    <color name="white">#d8f9fafa</color>
+    <color name="blue">#ee23dff4</color>
+    <color name="black">#000</color>
+    <color name="transparent">#0000</color>
+
+</resources>
