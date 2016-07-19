@@ -55,46 +55,7 @@ public class NumberActivity extends AppCompatActivity implements AdapterView.OnI
             }
         }
     }
-/*
-    private List<Map<String,Object>> getData() {
-        mlist = new ArrayList<Map<String, Object>>();
-        Map<String, Object> dataMap = new HashMap<String, Object>();
-        */
-/*dataMap.put("name", "三国演义");
-        dataMap.put("auther", "罗贯中");*//*
 
-        dataMap.put("context", "fdsdfsg");
-        mlist.add(dataMap);
-
-        dataMap = new HashMap<String, Object>();
-        */
-/*dataMap.put("name", "水浒传");
-        dataMap.put("auther", "施耐庵");*//*
-
-        dataMap.put("context", "gfdreswe");
-        mlist.add(dataMap);
-
-        dataMap = new HashMap<String, Object>();
-        */
-/*dataMap.put("name", "西游记");
-        dataMap.put("auther", "吴承恩");*//*
-
-        dataMap.put("context", "gxsfgds");
-        mlist.add(dataMap);
-
-        dataMap = new HashMap<String, Object>();
-        */
-/*dataMap.put("name", "红楼梦");
-        dataMap.put("auther", "曹雪芹+高鹗");*//*
-
-        dataMap.put("context", "gsagf");
-        mlist.add(dataMap);
-
-        return mlist;
-
-
-    }
-*/
  BaseAdapter mAdapter = new BaseAdapter() {
     @Override
     public int getCount() {
@@ -122,7 +83,7 @@ public class NumberActivity extends AppCompatActivity implements AdapterView.OnI
         }
         TextView tvShowData = (TextView) convertView.findViewById(R.id.tv_showdata);
         tvShowData.setText(mClassinfo.get(position).name);
-        return null;
+        return convertView;
     }
 };
 
@@ -130,12 +91,7 @@ public class NumberActivity extends AppCompatActivity implements AdapterView.OnI
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         //点击跳转
         Intent intent = new Intent(this, PhoneNumber.class);
-        int idx = 0;
-        try {
-            idx = DBReader.readTeldbClasslist().get(position).idx;
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        int idx = mClassinfo.get(position).idx;
         intent.putExtra("idx", idx);
         startActivity(intent);
     }

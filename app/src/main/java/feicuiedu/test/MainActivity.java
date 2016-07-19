@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             SharedPreferences.Editor editor= preferences.edit();
             editor.putBoolean(IS_FIRST_RUN,false);
             editor.apply();
-            startActivity(new Intent(MainActivity.this,PageActivity.class));
+            startActivity(new Intent(MainActivity.this,FirstActivity.class));
             finish();
 
         }
