@@ -1,4 +1,4 @@
-﻿package feicuiedu.test;
+package feicuiedu.test;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -6,7 +6,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
-
 import java.util.List;
 import java.util.Map;
 
@@ -15,7 +14,7 @@ import java.util.Map;
  */
 public class MyAdapter extends BaseAdapter {
     private List<Map<String, Object>> mList;
-    private Context                   mContext;
+    private Context   mContext;
 
 
     public MyAdapter(List<Map<String, Object>> list, Context context) {

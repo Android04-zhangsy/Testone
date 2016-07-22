@@ -27,7 +27,7 @@ public class PageActivity extends AppCompatActivity {
             @Override
             public void onAnimationEnd(Animation animation) {
                 //跳转到下一个页面
-                Intent intent = new Intent(PageActivity.this, LoginActivity.class);
+                Intent intent = new Intent(PageActivity.this, FirstActivity.class);
                 startActivity(intent);
             }
 
